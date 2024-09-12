@@ -1,4 +1,4 @@
-import { ethers } from "https://cdn.ethers.io/lib/ethers-5.0.esm.min.js";
+//
 
 let contract;
 let signer;
