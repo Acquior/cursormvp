@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Martech Fin - Invoice Tokenization Platform</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="https://cdn.ethers.io/lib/ethers-5.0.umd.min.js"></script>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="img/logo.png" alt="Martech Fin Logo">
+        </div>
+        <button id="connectWalletBtn" class="connect-wallet">Connect Wallet</button>
+    </header>
+
+    <main>
+        <div id="home" class="page active">
+            <h1>Welcome to Martech Fin</h1>
+            <div class="dashboard-container">
+                <div class="dashboard-card" data-page="small-business">
+                    <h2>Small Business</h2>
+                    <p>Create and manage your invoices</p>
+                </div>
+                <div class="dashboard-card" data-page="investor">
+                    <h2>Investor</h2>
+                    <p>Invest in tokenized invoices</p>
+                </div>
+                <div class="dashboard-card" data-page="big-business">
+                    <h2>Big Business</h2>
+                    <p>View and pay invoices</p>
+                </div>
+            </div>
+        </div>
+
+        <div id="small-business" class="page">
+            <h2>Small Business Dashboard</h2>
+            <form id="createInvoiceForm">
+                <input type="text" id="recipient" placeholder="Recipient Address" required>
+                <input type="number" id="amount" placeholder="Amount (in Wei)" required>
+                <button type="submit">Create Invoice</button>
+            </form>
+            <div id="smallBusinessInvoices"></div>
+        </div>
+
+        <div id="investor" class="page">
+            <h2>Investor Dashboard</h2>
+            <div id="availableInvoices"></div>
+        </div>
+
+        <div id="big-business" class="page">
+            <h2>Big Business Dashboard</h2>
+            <div id="receivedInvoices"></div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Martech Fin. All rights reserved.</p>
+    </footer>
+
+    <script type="module" src="js/main.js"></script>
+</body>
+</html>
