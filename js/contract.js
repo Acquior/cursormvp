@@ -1,5 +1,4 @@
 //
-import { ethers } from 'ethers';
 
 let contract;
 let signer;
