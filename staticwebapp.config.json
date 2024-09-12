@@ -1,14 +1,14 @@
 {
-  "routes": [
-    {
-      "route": "/*",
-      "serve": "/index.html",
-      "statusCode": 200
+    "routes": [
+      {
+        "route": "/*",
+        "rewrite": "/index.html",
+        "statusCode": 200
+      }
+    ],
+    "globalHeaders": {
+      "Content-Security-Policy": "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval'; style-src 'self' 'unsafe-inline'; connect-src 'self' https: wss:;",
+      "X-Frame-Options": "DENY",
+      "X-Content-Type-Options": "nosniff"
     }
-  ],
-  "globalHeaders": {
-    "Content-Security-Policy": "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://cdn.ethers.io; style-src 'self' 'unsafe-inline'; connect-src 'self' https: wss:;",
-    "X-Frame-Options": "DENY",
-    "X-Content-Type-Options": "nosniff"
   }
-}
