@@ -3,7 +3,7 @@
 let contract;
 let signer;
 
-const contractAddress = '0x1432b3621DF6467Ae4E48Cb6A71a3468918DE391'; // Replace with your actual contract address
+const contractAddress = '0x569477723Db7e98d53FfDb7Adb03d99ed94649a2'; // Replace with your actual contract address
 const contractABI = [
     "function createInvoice(address recipient, uint256 amount) public returns (uint256)",
     "function payInvoice(uint256 tokenId) public payable",
